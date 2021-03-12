@@ -1,11 +1,21 @@
 import React from 'react';
+import { connect } from 'react-redux';
 
-function App() {
+const Page = (props) => {
   return (
-    <div className="App">
-      <h1>Its Working</h1>
-    </div>
+    <div>Its Working</div>
   );
 }
 
-export default App;
+const mapStateToProps = (state) => {
+  return {
+    user: state.user
+  };
+}
+
+const mapDispatchToProps = (dispatch) => {
+  return {
+  };
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Page);
